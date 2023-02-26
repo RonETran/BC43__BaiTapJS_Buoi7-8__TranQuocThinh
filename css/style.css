@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,input,select,.ketQua{
+    background-color: #edf2f9;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    color: aliceblue;
+}
+.container{
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    margin: 60px auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgb(125 125 125 / 50%) 3px 3px 4px 0px, rgb(255 255 255 / 50%) -3px -3px 11px 1px;
+}
+.container-sub{
+    width: 80%;
+    margin: auto;
+    padding: 30px 0;
+}
+input {
+    width: 200px;
+    font-size: 16px;
+    margin: 20px 20px 20px 0;
+    padding: 15px 12px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    box-shadow: rgb(125 125 125 / 80%) 1px 1px 4px 1px inset, rgb(255 255 255 / 80%) -2px -2px 8px 1px inset;
+}
+input:focus{
+    background-color: white;
+}
+button{
+    font-size: 16px;
+    margin: 20px 0;
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: none;
+    color: rgb(23, 23, 23);
+    background: rgb(221, 201, 241);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ketQua{
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: rgb(125 125 125 / 80%) 1px 1px 4px 1px inset, rgb(255 255 255 / 80%) -2px -2px 8px 1px inset;
+}
+button:hover{
+    transform: scale(0.97);
+}
+.baiTap{
+    border: 1px solid rgb(80, 76, 76);
+    background-color: white;
+    margin-bottom: 20px;
+}
+.title{
+    padding: 15px 20px;
+    background-color: rgb(239, 221, 255);
+    /* background-color: white; */
+    /* cursor: pointer; */
+}
+
+.title p{
+    position: relative;
+}
+.title i{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.title-num {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: rgb(203, 151, 251);
+    text-align: center;
+    line-height: 22px;
+    border: 1px solid black;
+    margin-right: 5px;
+}
+.content{
+    background-color: white;
+}
+.content-sub{
+    width: 95%;
+    margin: auto;
+}

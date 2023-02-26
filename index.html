@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Buổi 7-8</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+      <div class="container-sub">
+        <h1>Bài tập JS buổi 7-8</h1>
+        <input type="number" placeholder="Nhập số n" id="add-num">
+        <button onclick="themSo()">Thêm số</button>
+        <div class="ketQua">
+          <i class="fa fa-angle-right"></i>
+          <span id="themSo"></span>
+        </div>
+
+        <div class="baiTap" id="baiMot">
+          <div class="title">
+            <p>
+              <span class="title-num">1</span>
+              Tổng số dương
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <button onclick="tongSoDuong()">Tính tổng</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="tongSoDuong"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="baiTap" id="baiHai">
+          <div class="title">
+            <p>
+              <span class="title-num">2</span>
+              Đếm số dương
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <button onclick="demSo()">Đếm số</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="demSo"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="baiTap" id="baiBa">
+          <div class="title">
+            <p>
+              <span class="title-num">3</span>
+              Tìm số nhỏ nhất
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <button onclick="soNhoNhat()">Tìm số nhỏ nhất</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="timSoNhoNhat"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="baiTap" id="baiBon">
+          <div class="title">
+            <p>
+              <span class="title-num">4</span>
+              Tìm số dương nhỏ nhất
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <button onclick="soDuongNhoNhat()">Tìm số dương nhỏ nhất</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="timSoDuongNhoNhat"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="baiTap" id="baiNam">
+          <div class="title">
+            <p>
+              <span class="title-num">5</span>
+              Tìm số chẵn cuối cùng
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <button onclick="soChanCuoiCung()">Tìm số chẵn</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="timSoChan"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="baiTap" id="baiSau">
+          <div class="title">
+            <p>
+              <span class="title-num">6</span>
+              Đổi chỗ
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <input type="number" placeholder="Nhập số vị trí 1" id="vi-tri-1">
+              <input type="number" placeholder="Nhập số vị trí 2" id="vi-tri-2">
+              <button onclick="doiCho()">Đổi chỗ</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="doiCho"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="baiTap" id="baiBay">
+          <div class="title">
+            <p>
+              <span class="title-num">7</span>
+              Sắp xếp tăng dần
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <button onclick="sapXep()">Sắp xếp</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="sapXep"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="baiTap" id="baiTam">
+          <div class="title">
+            <p>
+              <span class="title-num">8</span>
+              Tìm số nguyên tố đầu tiên
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <button onclick="soNguyenToDauTien()">Tìm số nguyên tố</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="timSoNguyenTo"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="baiTap" id="baiChin">
+          <div class="title">
+            <p>
+              <span class="title-num">9</span>
+              Đếm số nguyên
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <input type="number" placeholder="Nhập số" id="add-new-num">
+              <button onclick="themSoMoi()">Thêm số</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="themSoMoi"></span>
+              </div>
+              <button onclick="soNguyen()">Đếm số nguyên</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="demSoNguyen"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="baiTap" id="baiMuoi">
+          <div class="title">
+            <p>
+              <span class="title-num">10</span>
+              So sánh số lượng số âm và số dương
+            </p>
+          </div>
+          <div class="content">
+            <div class="content-sub">
+              <button onclick="soSanh()">So sánh</button>
+              <div class="ketQua">
+                <i class="fa fa-angle-right"></i>
+                <span id="soSanh"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/method.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
