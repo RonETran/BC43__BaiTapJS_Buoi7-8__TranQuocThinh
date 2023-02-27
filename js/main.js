@@ -26,8 +26,13 @@ function soNhoNhat() {
 
 // Bài 4: Tìm số dương nhỏ nhất
 function soDuongNhoNhat() {
-    var min = timSoDuongNhoNhat(arr1);
-    document.getElementById('timSoDuongNhoNhat').innerHTML = 'Số dương nhỏ nhất: ' + min;
+    var arrNew = themSoDuong(arr1);
+    if (arrNew.length<1) {
+        document.getElementById('timSoDuongNhoNhat').innerHTML = 'Không có số dương trong mảng.'
+    }else {
+        var res = timSoNhoNhat(arrNew);
+        document.getElementById('timSoDuongNhoNhat').innerHTML = 'Số dương nhỏ nhất: ' + res;
+    } 
 }
 
 // Bài 5: Tìm số chẵn cuối cùng

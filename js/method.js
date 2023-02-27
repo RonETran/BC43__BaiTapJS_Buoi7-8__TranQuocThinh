@@ -61,16 +61,15 @@ function timSoNhoNhat(arrNum) {
     return min;
 }
 
-// Hàm tìm số dương nhỏ nhất
-function timSoDuongNhoNhat(arrNum) {
+// Hàm thêm số dương vào mảng mới
+function themSoDuong(arrNum) {
     var newArr = [];
     for (var i=0; i<arrNum.length; i++) {
         if (kiemTraSoDuong(arrNum[i])) {
-            newArr += arrNum[i]; 
+            newArr.push(arrNum[i]); 
         }
-        var res = timSoNhoNhat(newArr);
     }
-    return res;
+    return newArr;
 }
 
 // Hàm kiểm tra số chẵn
